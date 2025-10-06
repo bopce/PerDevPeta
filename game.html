@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Day</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg-image {
+      background-image: url('img/newday.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .warning-box {
+      background-color: rgba(128, 128, 128, 0.8);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .title-text {
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-top: 50px;
+    }
+
+    .bottom-btn {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      margin: 10px 0;
+    }
+
+    .bottom-btn:hover {
+      background-color: #23272b;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="bg-image">
+    <div>
+      <div id="warning" class="warning-box">You wouldn't say that now. Would you?</div>
+      <div id="title" class="title-text">A new day</div>
+    </div>
+
+    <div>
+      <button class="bottom-btn" onclick="changeTitle()">yet feels just like any other</button><br />
+      <button class="bottom-btn" onclick="showWarning()">For a fresh experience.</button>
+    </div>
+  </div>
+
+  <script>
+    function changeTitle() {
+      document.getElementById("title").textContent = "Time to live through another.";
+    }
+
+    function showWarning() {
+      document.getElementById("warning").style.display = "block";
+    }
+	
+	function showWarning() {
+  const warning = document.getElementById("warning");
+  warning.style.display = "block";
+
+  setTimeout(() => {
+    warning.style.display = "none";
+  }, 5000); // disappears after 5 seconds
+}
+function changeTitle() {
+  document.getElementById("title").textContent = "Time to live through another.";
+
+  setTimeout(() => {
+    window.location.href = "Scene2.html"; // Redirects after 7 seconds
+  }, 7000);
+}
+
+  </script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

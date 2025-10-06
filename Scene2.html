@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uneventful</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg-image {
+      background-image: url('img/another.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .warning-box {
+      background-color: rgba(128, 128, 128, 0.8);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .title-text {
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-top: 50px;
+    }
+
+    .bottom-btn {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      margin: 10px 0;
+    }
+
+    .bottom-btn:hover {
+      background-color: #23272b;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="bg-image">
+    <div>
+      <div id="warning" class="warning-box">That. That doesn't sound like the person you are.</div>
+      <div id="title" class="title-text bg-dark">Looks like class is starting.</div>
+    </div>
+
+    <div>
+      <button class="bottom-btn" onclick="changeTitle()">Another Day Another Lesson.</button><br />
+      <button class="bottom-btn" onclick="showWarning()">A new lesson! How exciting.</button>
+    </div>
+  </div>
+
+  <script>
+    function changeTitle() {
+      document.getElementById("title").textContent = "Just wait the day out.";
+    }
+
+    function showWarning() {
+      document.getElementById("warning").style.display = "block";
+    }
+	
+	function showWarning() {
+  const warning = document.getElementById("warning");
+  warning.style.display = "block";
+
+  setTimeout(() => {
+    warning.style.display = "none";
+  }, 5000); // disappears after 5 seconds
+}
+function changeTitle() {
+  document.getElementById("title").textContent = "Just wait the day out.";
+
+  setTimeout(() => {
+    window.location.href = "Scene3.html"; // Redirects after 7 seconds
+  }, 7000);
+}
+
+  </script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

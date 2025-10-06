@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Must make new memories</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg-image {
+      background-image: url('img/coffee.png'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    .top-text {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    .warning-box {
+      background-color: rgba(128, 128, 128, 0.8);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      display: none;
+    }
+
+    .action-btn {
+      background-color: #343a40;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+      margin: 10px 0;
+    }
+
+    .action-btn:hover {
+      background-color: #23272b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-image">
+    <div id="title" class="top-text">
+      Appreciate the little things, like this coffee being..
+    </div>
+
+    <button class="action-btn" onclick="showWarning()">good</button>
+    <button class="action-btn" onclick="changeTitle()">bad</button>
+
+    <div id="warning" class="warning-box">
+      However don't fall to the trap of lying to yourself for the sake of 'enjoying' unenjoyable things.
+    </div>
+  </div>
+
+  <script>
+
+  function showWarning() {
+    document.getElementById("warning").style.display = "block";
+  }
+
+  function changeTitle() {
+    document.getElementById("title").textContent =
+      "Welp not everything can be good after all, That's what makes life interesting. Time to go to school";
+
+    // Redirect to Scene6.html after 5 seconds
+    setTimeout(function () {
+      window.location.href = "Scene6.html";
+    }, 5000);
+  }
+</script>
+  </script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
